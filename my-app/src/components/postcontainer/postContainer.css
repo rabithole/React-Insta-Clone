@@ -1,0 +1,23 @@
+.postContainer {
+	width: 500px;
+	height: auto;
+	background-color: ;
+	padding: 5px;
+	margin: 0 auto 30px auto;
+	border: 2px solid lightgrey;
+}
+
+p {
+	font-size: ;
+	color: black;
+	/*margin-left: 5px;*/
+	text-align: left;
+}
+
+input {
+	border: none;
+	width: 90%;
+	height: 50px;
+	padding-left: 40px;
+	border: 1px solid lightgrey;
+}
