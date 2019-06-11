@@ -21,3 +21,7 @@ input {
 	padding-left: 40px;
 	border: 1px solid lightgrey;
 }
+
+img {
+	width: 100%;
+}

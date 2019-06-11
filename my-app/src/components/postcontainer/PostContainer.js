@@ -6,7 +6,7 @@ import Comments from '../comments/CommentSection';
 const PostContainer = props => {
 	console.log(props.dummyData)
 	return (
-		<div className='postContainer'>
+		<div>
 			<h1>This is the Post Container</h1>
 			
 			 
@@ -14,6 +14,11 @@ const PostContainer = props => {
 					<Comments
 						thumb={post.thumbnailUrl}
 						username={post.username}
+						likes={post.likes}
+						mainImg={post.imageUrl}
+						comments={post.comments.map((post => (
+							<p><strong>{post.username}</strong> {post.text}</p>
+						)))}
 					/>
 				))}
 		</div>
