@@ -9,7 +9,13 @@ const PostContainer = props => {
 		<div className='postContainer'>
 			<h1>This is the Post Container</h1>
 			
-			<Comments />
+			 
+				{props.dummyData.map(post => (
+					<Comments
+						thumb={post.thumbnailUrl}
+						username={post.username}
+					/>
+				))}
 		</div>
 	)
 }
