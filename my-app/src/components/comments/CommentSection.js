@@ -8,6 +8,9 @@ class Comments extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
+			comments: props.comments,
+			newComment: '',
+			username: 'Robert',
 			likes: props.likes,
 		}
 	}
@@ -17,6 +20,19 @@ class Comments extends React.Component {
 			likes: this.state.likes + 1
 		})
 	}
+
+	handleChange = e => {
+		this.setState({ [e.target.name]: e.target.value });
+	};
+
+	addNewComment = (e) => {
+	    e.preventDefault();	    
+    	this.setState({
+ 			 comments: [...this.state.comments, <p><strong>{this.state.username}</strong> {this.state.newComment}</p>]
+			});
+
+	    this.setState({ newComment: '' });
+  	};
 
 	render(props){
 		return (
@@ -33,14 +49,15 @@ class Comments extends React.Component {
 					<img src='img/instagram-heart.png' alt='Like heart' onClick={this.addLike} />
 					<p>{this.state.likes} likes</p> 
 					
-					{this.props.comments.map(comment => <div>{comment}</div>)}
+					{this.state.comments.map(comment => <div>{comment}</div>)}
 
-					<form> 
+					<form onSubmit={this.addNewComment}> 
 						<input 
 							type='text' 
 							placeholder='Add a comment...' 
 							name='newComment'
-							value={this.props.newComment}
+							value={this.state.newComment}
+							onChange={this.handleChange}
 							/>
 					</form>
 				</div>
