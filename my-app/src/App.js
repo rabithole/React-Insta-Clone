@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import SearchBar from './components/searchbar/SearchBar';
+import Search from '../src/components/searchbar/SearchBar';
 // import Comments from './components/comments/CommentSection';
 import PostContainer from './components/postcontainer/PostContainer';
 
@@ -22,11 +22,24 @@ class App extends React.Component {
     this.setState({ dummyData: dummyData });
   }
 
+  search = (search) => {
+    console.log(search)
+    
+    this.setState({
+      dummyData: this.state.dummyData.filter(item => {
+        console.log(item.username)
+       return item.username === search;
+      })
+    })
+    console.log(this.state)
+    console.log(this.state.dummyData[1].username)
+  }
+
   render() {
     return (
       <div className="App">
       
-      <SearchBar />
+      <Search search={this.search} />
       <PostContainer 
         dummyData={this.state.dummyData}
       />

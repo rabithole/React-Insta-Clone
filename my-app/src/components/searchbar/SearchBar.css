@@ -1,0 +1,31 @@
+.searchBar {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin: 10px 0px 10px 0;
+	border-bottom: 3px solid lightgrey;
+	padding-bottom: 10px;
+}
+
+.searchBar img {
+	width: 50px;
+	height: 50px;
+}
+
+.searchBar input {
+	width: 300px;
+	height: 40px;
+	border-radius: 5px;
+	margin-right: 100px;
+}
+
+.searchBar img:nth-child(1) {
+	margin-right: 20px;
+	border-right: 2px solid lightgrey;
+	padding-right: 15px;
+}
+
+.searchBar img:nth-child(2) {
+	margin-right: 100px;
+	width: 100px;
+}
