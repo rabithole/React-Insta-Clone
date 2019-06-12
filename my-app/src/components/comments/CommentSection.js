@@ -30,7 +30,7 @@ class Comments extends React.Component {
     	this.setState({
  			 comments: [...this.state.comments, <p><strong>{this.state.username}</strong> {this.state.newComment}</p>]
 			});
-
+    	localStorage.setItem('newComment', this.state.newComment)
 	    this.setState({ newComment: '' });
   	};
 
