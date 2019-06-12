@@ -22,17 +22,12 @@ class App extends React.Component {
     this.setState({ dummyData: dummyData });
   }
 
-  search = (search) => {
-    console.log(search)
-    
+  search = (search) => {    
     this.setState({
       dummyData: this.state.dummyData.filter(item => {
-        console.log(item.username)
        return item.username === search;
       })
     })
-    console.log(this.state)
-    console.log(this.state.dummyData[1].username)
   }
 
   render() {

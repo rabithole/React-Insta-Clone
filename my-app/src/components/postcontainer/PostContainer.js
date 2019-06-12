@@ -4,7 +4,6 @@ import './postContainer.css';
 import Comments from '../comments/CommentSection';
 
 const PostContainer = props => {
-	console.log(props.dummyData)
 	return (
 		<div>			
 			{props.dummyData.map(post => (

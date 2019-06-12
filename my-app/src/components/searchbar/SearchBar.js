@@ -16,7 +16,6 @@ class Search extends React.Component {
 	search = (e) => {
 		e.preventDefault();
 		this.props.search(this.state.search);
-		// console.log(this.state.search)
 		this.setState({
 			search: e.target.value
 		})
