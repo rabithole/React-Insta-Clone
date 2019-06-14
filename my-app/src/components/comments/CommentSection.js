@@ -11,7 +11,7 @@ class Comments extends React.Component {
 			comments: props.comments,
 			newComment: '',
 			username: 'Robert',
-			likes: props.likes,
+			likes: 0,
 		}
 	}
 
@@ -33,8 +33,8 @@ class Comments extends React.Component {
 			});
 
 	    // const listComments = [...this.state.comments];
-    	// localStorage.setItem('commentState', this.state.comments)
-    	console.log(this.state.comments )
+    	// localStorage.setItem('commentState', JSON.stringify(this.state.comments))
+    	console.log(this.state.comments)
     	// this.setState({ localStorage.getItem( 'commentState', this.state.comments )})
 
 	    this.setState({ newComment: '' });
