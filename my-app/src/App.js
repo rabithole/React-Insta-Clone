@@ -9,9 +9,10 @@ import './App.css';
 // import dummyData from './dummy-data.js';
 
 import PostPage from '../src/components/postcontainer/PostsPage';
-import Authenticate from '../src/components/authentication/withAuthenticate';
+import withAuthenticate from '../src/components/authentication/withAuthenticate';
 import Login from './components/login/Login';
 
+const ComponentFromWithAuthenticate = withAuthenticate(PostPage)(Login);
 
 class App extends React.Component {
   constructor(props) {
@@ -21,27 +22,10 @@ class App extends React.Component {
     };
   }
 
-  // const ComponentFromWithAuthenticate = props => {
-
-  // }
-
-  // componentDidMount() {
-  //   console.log('CDM')
-  //   this.setState({ dummyData: dummyData });
-  // }
-
-  // search = (search) => {    
-  //   this.setState({
-  //     dummyData: this.state.dummyData.filter(item => {
-  //      return item.username === search;
-  //     })
-  //   })
-  // }
-
   render() {
     return (
       <div className="App">
-        <Authenticate />
+        <ComponentFromWithAuthenticate />
       </div>
     );
   }
