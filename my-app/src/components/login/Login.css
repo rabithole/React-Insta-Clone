@@ -1,0 +1,45 @@
+body {
+	/*background-color: grey;*/
+}
+
+.formContainer h2, h3 {
+	font-size: 2em;
+	margin-bottom: -100px;
+	padding: 50px;
+	background-color: grey;
+	color: white;
+	text-shadow: 5px 5px 5px black;
+}
+
+.formContainer form {
+	background-color: darkred;
+	margin: 150px 50px;
+	padding: 50px;
+	border-radius: 10px;
+	box-shadow: 15px 15px 25px black;
+}
+
+form p {
+	color: white;
+	font-size: 1.5em;
+	text-shadow: 5px 5px 5px black;
+}
+
+.formContainer form input {
+	margin: 25px;
+	border-radius: 10px;
+	box-shadow: 15px 15px 15px;
+}
+
+button {
+	width: 200px;
+	height: 40px;
+	background-color: grey;
+	border-radius: 5px;
+	border: none;
+	box-shadow: 4px 4px 14px black;
+	font-size: 1.5em;
+	font-weight: bold;
+	text-shadow: 2px 2px 2px black;
+	color: white;
+}

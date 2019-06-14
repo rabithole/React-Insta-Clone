@@ -1,17 +1,27 @@
 import React from 'react';
+import Login from '../login/Login';
 
 class Authenticate extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-
+			loggedIn: false,
 		}
+	}
+
+	componentDidMount() {
+		if (!localStorage.getItem('user')) {
+        this.setState({ loggedIn: false });
+      } else {
+        this.setState({ loggedIn: true });
+      }
 	}
 
 	render() {
 		return (
 			<div>
-				<h1>This is an authentic component</h1>
+				if (this.state.loggedIn) return <PostsPage />;
+      				return <LoginPage />;
 			</div>
 		)
 	}
