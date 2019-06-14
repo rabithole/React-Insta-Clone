@@ -9,7 +9,7 @@ import './App.css';
 // import dummyData from './dummy-data.js';
 
 import PostPage from '../src/components/postcontainer/PostsPage';
-// import Authenticate from '../src/components/authentication/withAuthenticate';
+import Authenticate from '../src/components/authentication/withAuthenticate';
 import Login from './components/login/Login';
 
 
@@ -41,7 +41,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Login />
+        <Authenticate />
       </div>
     );
   }

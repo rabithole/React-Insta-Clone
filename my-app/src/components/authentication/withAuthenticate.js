@@ -1,5 +1,6 @@
 import React from 'react';
 import Login from '../login/Login';
+import PostPage from '../postcontainer/PostsPage';
 
 class Authenticate extends React.Component {
 	constructor() {
@@ -18,12 +19,10 @@ class Authenticate extends React.Component {
 	}
 
 	render() {
-		return (
-			<div>
-				if (this.state.loggedIn) return <PostsPage />;
-      				return <LoginPage />;
-			</div>
-		)
+		if (this.state.loggedIn) {
+			return <PostPage />;
+		}
+			return <Login />;
 	}
 }
 
