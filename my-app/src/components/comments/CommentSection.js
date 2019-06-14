@@ -27,10 +27,16 @@ class Comments extends React.Component {
 
 	addNewComment = (e) => {
 	    e.preventDefault();	    
-    	this.setState({
+
+	    this.setState({
  			 comments: [...this.state.comments, <p><strong>{this.state.username}</strong> {this.state.newComment}</p>]
 			});
-    	localStorage.setItem('newComment', this.state.newComment)
+
+	    // const listComments = [...this.state.comments];
+    	// localStorage.setItem('commentState', this.state.comments)
+    	console.log(this.state.comments )
+    	// this.setState({ localStorage.getItem( 'commentState', this.state.comments )})
+
 	    this.setState({ newComment: '' });
   	};
 

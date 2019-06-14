@@ -8,6 +8,7 @@ const PostContainer = props => {
 		<div>			
 			{props.dummyData.map(post => (
 				<Comments
+					key={post.id}
 					thumb={post.thumbnailUrl}
 					username={post.username}
 					likes={post.likes}
